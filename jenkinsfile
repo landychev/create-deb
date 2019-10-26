@@ -3,8 +3,12 @@ pipeline {
   stages {
     stage('Checkout from LANDYCHEV') {
       steps {
-        echo "Hello World"  
-        git branch: 'master', credentialsId 'c44f4d85-791d-44fa-9a09-bc9719ba0571', url: 'https://github.com/landychev/create-deb.git'
+  git(
+       url: 'https://github.com/create-deb.git',
+       credentialsId: 'c44f4d85-791d-44fa-9a09-bc9719ba0571',
+       branch: "${master}"
+    )        
+
       }
     }
    }
