@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              checkout(
+              git branch: 'master',
                  credentialsId: 'c44f4d85-791d-44fa-9a09-bc9719ba0571',
-                 url: 'https://github.com/landychev/create-deb.git',
-		 branch: 'master'
-
-                 )
+                 url: 'https://github.com/landychev/create-deb.git'
+                  }
+                                   
             }
         }
+
         stage('Test') {
             steps {
                 echo 'Testing..'
