@@ -4,11 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                   echo "bög"
+                   echo '"bög'
                   }
                                    
-            }
-        }
+           }
 
         stage('Test') {
             steps {
