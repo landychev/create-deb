@@ -7,7 +7,7 @@ pipeline {
               git branch: 'master',
                  credentialsId: 'c44f4d85-791d-44fa-9a09-bc9719ba0571',
                  url: 'https://github.com/landychev/create-deb.git'
-                  
+                  }
                                    
             }
         }
