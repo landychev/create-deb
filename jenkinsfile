@@ -1,23 +1,11 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                   echo '"bög'
-                  }
-                                   
-           }
-
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+  agent any
+  stages {
+    stage('Checkout from LANDYCHEV') {
+      steps {
+        echo "Hello World"  
+        git branch: credentialsId: 'c44f4d85-791d-44fa-9a09-bc9719ba0571', poll: false, url: 'https://github.com/landychev/create-deb.git'
+      }
     }
-}
+   }
+  }
