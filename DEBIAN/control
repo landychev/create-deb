@@ -1,0 +1,8 @@
+Package: dagens-datum
+Version: 1.0
+Architecture: all
+Essential: no
+Priority: optional
+Depends: coreutils
+Maintainer: Aleksei Landychev
+Description: En app som skriver ut datum och tid.
