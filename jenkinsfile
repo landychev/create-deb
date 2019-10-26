@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                git branch: 'master',
+    		credentialsId: 'c44f4d85-791d-44fa-9a09-bc9719ba0571',
+    		url: 'ssh://git@landychev/create-deb.git'
             }
         }
         stage('Test') {
