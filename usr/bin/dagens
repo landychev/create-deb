@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "Klockan är: "$(date +%F-%T)
