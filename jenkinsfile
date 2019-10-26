@@ -5,8 +5,7 @@ pipeline {
       steps {
   git(
        url: 'https://github.com/create-deb.git',
-       credentialsId: 'c44f4d85-791d-44fa-9a09-bc9719ba0571',
-       branch: "master"
+       credentialsId: 'c44f4d85-791d-44fa-9a09-bc9719ba0571'
     )        
 
       }
