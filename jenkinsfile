@@ -12,11 +12,12 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'dagens'
+                sh 'apt remove dagens-datum -y'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh 'mv /var/lib/jenkins/workspace/alex-pipline/create-deb.deb /tmp/'
             }
         }
     }
