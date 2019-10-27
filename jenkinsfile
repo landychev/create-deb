@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout from LANDYCHEV') {
       steps {
-            git url: 'https://github.com/landychev/create-deb.git'
+            git url: 'github.com/landychev/create-deb.git'
            
       }
     }
