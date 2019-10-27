@@ -1,14 +1,23 @@
 pipeline {
-  agent any
-  stages {
-    stage('Checkout from LANDYCHEV') {
-      steps {
-                sh 'echo "Hello World"'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+               sh 'git fetch https://github.com/landychev/create-deb.git'
+               sh 'dpkg-deb --build create-deb/'
+               sh 'sudo dpkg -i create-deb.deb'
             }
+        }
+        stage('Test') {
+            steps {
+                sh 'dagens'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-   }
-  }
+}
